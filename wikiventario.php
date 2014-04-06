@@ -1,6 +1,6 @@
 <?php
 /**
-* @author Kamisama666 
+* @author Ángel García Jiménez 
 * @license GPL 2 (http://www.gnu.org/licenses/gpl.html)
 *
 * Crea un indice con todas las palabras que hayan sido traducidas con 
@@ -151,7 +151,9 @@ if (count($indicef["palabras"])<1) {
 	exit(12);
 }
 //Se elimina el antigua archivo quitar las palabras que se hayan borrado del glosario
-unlink($destino);
+if (is_file($destino)) {
+	unlink($destino);
+}
 $fdestino=fopen($destino, "a+");
 if ($fdestino===false) {
 	echo "Error: No se ha podido abrir el archivo destino $destino\n";

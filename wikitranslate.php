@@ -1,7 +1,7 @@
 <?php 
 /**
 *
-* @author Kamisama666
+* @author Ángel García Jiménez 
 * @license GPL 2 (http://www.gnu.org/licenses/gpl.html)
 *
 * Sustituye en todos los archivos de la wiki aquellas palabras registradas en el indice
@@ -311,8 +311,8 @@ if (!is_dir($path)) {
 }
 
 if (!is_file($archivoindice)) {
-	echo "Error: el file $path no es valido\n";
-	logEvent("Error: el file $path no es valido");
+	echo "Error: el archivo $archivoindice no es valido\n";
+	logEvent("Error: el archivo $archivoindice no es valido");
 	exit(10);
 }
 
